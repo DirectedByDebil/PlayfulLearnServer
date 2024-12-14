@@ -90,7 +90,7 @@ namespace Server
             {
 
                 Task<HttpListenerContext> task = _listener.GetContextAsync();
-
+                
 
                 HttpListenerContext context = await task;
 

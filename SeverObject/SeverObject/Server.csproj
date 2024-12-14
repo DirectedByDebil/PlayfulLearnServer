@@ -85,6 +85,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\IO.cs" />
+    <Compile Include="LoginFields.cs" />
     <Compile Include="ServerModel.cs" />
     <Compile Include="ServerPresenter.cs">
       <SubType>Form</SubType>
