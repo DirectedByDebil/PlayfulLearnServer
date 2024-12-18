@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using Server;
 
-namespace Server
+namespace Core
 {
 
     public class Program

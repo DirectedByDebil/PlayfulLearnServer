@@ -49,24 +49,6 @@ namespace Server
         }
 
 
-
-        private async void OnStartClicked(object sender, EventArgs e)
-        {
-
-            _listener.Start();
-            
-            _model.GotMessage += Print;
-
-            _isActive = true;
-
-
-            Print("Server started");
-
-
-            await Task.Run(ListenContextAsync);
-        }
-
-
         private void Print(string text)
         {
             
@@ -105,6 +87,25 @@ namespace Server
         }
 
 
+        #region On Buttons Clicked
+
+        private async void OnStartClicked(object sender, EventArgs e)
+        {
+
+            _listener.Start();
+            
+            _model.GotMessage += Print;
+
+            _isActive = true;
+
+
+            Print("Server started");
+
+
+            await Task.Run(ListenContextAsync);
+        }
+
+
         private void OnStopClicked(object sender, EventArgs e)
         {
 
@@ -123,5 +124,7 @@ namespace Server
 
             Application.Exit();
         }
+        
+        #endregion
     }
 }
